@@ -4,9 +4,6 @@ __pycache__/
 *$py.class
 
 # Custom to this project
-resources/
-./resources/
-/resources/
 
 # C extensions
 *.so
