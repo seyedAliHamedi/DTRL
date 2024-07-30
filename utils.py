@@ -178,8 +178,8 @@ def save_results(result_path, rewardSetup, punish, avg_loss_history, avg_fail_hi
 def plot_histories(rSetup, init_punish, punish, epsilon, init_explore_rate, explore_rate, exp_counter, lossHistory, avg_time_history, avg_energy_history, avg_fail_history, iot_usage, mec_usage, cc_usage, path_history):
     fig, axs = plt.subplots(3, 2, figsize=(20, 15))
 
-    plt.suptitle(f"Training History with setup {rSetup}, initial punish: {
-                 init_punish}, final punish: {punish}", fontsize=16, fontweight='bold')
+    plt.suptitle(
+        f"Training History with setup {rSetup}, initial punish: {init_punish}, final punish: {punish}", fontsize=16, fontweight='bold')
 
     loss_values = lossHistory
     axs[0, 0].plot(loss_values, label='Average Loss',
@@ -264,8 +264,8 @@ def plot_histories(rSetup, init_punish, punish, epsilon, init_explore_rate, expl
 
     sns.heatmap(path_counts, cmap="YlGnBu",
                 xticklabels=output_classes, ax=axs[2, 1])
-    axs[2, 1].set_title(f'Path History Heatmap - All Epochs\n(r: {rSetup}, p: {init_punish}, ep: {
-                        epsilon}, exp_rate: {init_explore_rate:.5f} - {explore_rate:.5f}, exp_times: {exp_counter})')
+    axs[2, 1].set_title(
+        f'Path History Heatmap - All Epochs\n(r: {rSetup}, p: {init_punish}, ep: {epsilon}, exp_rate: {init_explore_rate:.5f} - {explore_rate:.5f}, exp_times: {exp_counter})')
     axs[2, 1].set_xlabel('Output Classes')
     axs[2, 1].set_ylabel('Epochs')
 
