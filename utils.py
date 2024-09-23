@@ -121,6 +121,7 @@ def getSetup(e, t, setup, alpha=1, beta=1):
 
 def save_results(result_path, rewardSetup, punish, avg_loss_history, avg_fail_history, avg_time_history, avg_energy_history, avg_reward_history, num_epoch):
     half_num_epoch = num_epoch//2
+    print("sdadsad")
     new_epoch_data = {
         "Setup": rewardSetup,
         "Punishment": punish,
@@ -172,7 +173,8 @@ def save_results(result_path, rewardSetup, punish, avg_loss_history, avg_fail_hi
         df = pd.concat([df, new_df], ignore_index=True)
     else:
         df = pd.DataFrame(new_epoch_data_list)
-    # df.to_csv(result_path, index=False)
+
+    df.to_csv(result_path, index=False)
 
 
 def plot_histories(rSetup, init_punish, punish, epsilon, init_explore_rate, explore_rate, exp_counter, lossHistory, avg_time_history, avg_energy_history, avg_fail_history, iot_usage, mec_usage, cc_usage, path_history):
